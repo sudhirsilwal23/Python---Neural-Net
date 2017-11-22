@@ -81,9 +81,9 @@ classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = [
 # Fitting the ANN to the Training set
 classifier.fit(X_train, y_train, batch_size = 10, epochs = 100)
 
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 # Step : 4 Making predictions and evaluating the model
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 
 #4(a) Predicting the Test set results
 y_pred = classifier.predict(X_test)
@@ -108,9 +108,9 @@ new_prediction = (new_prediction > 0.5)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 # Step : 5 Evaluating, Improving and Tuning the ANN
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 
 #5(a) Evaluating the ANN
 from keras.wrappers.scikit_learn import KerasClassifier
